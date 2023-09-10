@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 
 import CreateServerModal from "@/components/modals/create-server-modal";
 import InviteModal from "@/components/modals/invite-modal";
+import EditServerModal from "@/components/modals/edit-server-modal";
+import MembersModal from "../modals/members-modal";
 
 interface Props {}
 
@@ -22,6 +24,8 @@ const ModalProvider = (props: Props) => {
     <>
       <CreateServerModal />
       <InviteModal />
+      <EditServerModal />
+      <MembersModal />
     </>
   );
 };
