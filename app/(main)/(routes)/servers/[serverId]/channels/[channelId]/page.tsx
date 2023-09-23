@@ -4,6 +4,7 @@ import { redirectToSignIn } from "@clerk/nextjs";
 import { db } from "@/lib/db";
 import { currentProfile } from "@/lib/currentProfile";
 
+import ChatInput from "@/components/chat/chat-input";
 import ChatHeader from "@/components/chat/chat-header";
 
 type ChannelIdPageProps = {
@@ -45,6 +46,8 @@ const ChannelIdPage = async ({
         serverId={channel.serverId}
         type={"channel"}
       />
+      <div className='flex-1'>Future Messages...!</div>
+      <ChatInput />
     </div>
   );
 };
