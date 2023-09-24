@@ -14,7 +14,7 @@ import { Edit, FileIcon, ShieldAlert, ShieldCheck, Trash } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 import UserAvatar from "@/components/user-avatar";
-import ActionTooltip from "@/components/action.tooltip";
+import ActionTooltip from "@/components/action-tooltip";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
