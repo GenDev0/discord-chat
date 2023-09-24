@@ -9,6 +9,7 @@ import { MessageWithMemberWithProfile } from "@/types";
 
 import { useChatQuery } from "@/hooks/use-chat-query";
 import { useChatSocket } from "@/hooks/use-chat-socket";
+import { useChatScroll } from "@/hooks/use-chat-scroll";
 
 import ChatItem from "./chat-item";
 import ChatWelcome from "./chat-welcome";
@@ -54,6 +55,14 @@ const ChatMessages = ({
     });
 
   useChatSocket({ addKey, updateKey, queryKey });
+
+  useChatScroll({
+    chatRef,
+    bottomRef,
+    shouldLoadMore: !isFetchingNextPage && !!hasNextPage,
+    loadMore: fetchNextPage,
+    count: data?.pages?.[0]?.items?.length ?? 0,
+  });
 
   if (status === "loading") {
     return (
