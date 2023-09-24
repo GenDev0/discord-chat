@@ -12,6 +12,7 @@ import DeleteServerModal from "@/components/modals/delete-server-modal";
 import DeleteChannelModal from "@/components/modals/delete-channel-modal";
 import EditChannelModal from "@/components/modals/edit-channel-modal";
 import MessageFileModal from "@/components/modals/message-file-modal";
+import DeleteMessageModal from "@/components/modals/delete-message-modal";
 
 interface Props {}
 
@@ -38,6 +39,7 @@ const ModalProvider = (props: Props) => {
       <DeleteChannelModal />
       <EditChannelModal />
       <MessageFileModal />
+      <DeleteMessageModal />
     </>
   );
 };
